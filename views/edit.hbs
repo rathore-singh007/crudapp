@@ -1,0 +1,73 @@
+{{>header}}
+
+<title>Crud | Add</title>
+
+
+{{>navbar}}
+
+<div class="container-fluid my-3 mid-section">
+    <h5 class="background text-dark text-center p-2 ">Update Emplyee Record</h5>
+    <div class="container">
+        <form action="/edit/{{data._id}}" method="post">
+            <div class="mb-3 ">
+                <label for="name">Name <span class="text-danger">*</span></label>
+                <input type="text" name="name" required placeholder="Full Name" class="form-control"
+                    value="{{data.name}}">
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label>Email <span class="text-danger">*</span></label>
+                    <input type="email" name="email" required placeholder="Pleaseenteryouremail@gmail.com"
+                        class="form-control" value="{{data.email}}">
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="phone No.">Phone<span class="text-danger">*</span></label>
+                    <input type="text" name="phone" required placeholder="+91-9874561230" class="form-control"
+                        value="{{data.phone}}">
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>DOB<span class="text-danger">*</span></label>
+                    <input type="text" name="DOB" required placeholder="D.O.B" class="form-control"
+                        value="{{data.DOB}}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label>Sex<span class="text-danger">*</span></label>
+                    <input type="text" name="sex" required placeholder="" class="form-control" value="{{data.sex}}">
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="Designation">Designation <span class="text-danger">*</span></label>
+                    <input type="text" name="designation" required placeholder="designation" class="form-control"
+                        value="{{data.designation}}">
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="Salary">Salary <span class="text-danger">*</span></label>
+                    <input type="text" name="salary" required placeholder="Salary" class="form-control"
+                        value="{{data.salary}}">
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="State">State</label>
+                    <input type="text" name="state" placeholder="state" class="form-control" value="{{data.state}}">
+
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="city">City</label>
+                    <input type="text" name="city" placeholder="city" class="form-control" value="{{data.city}}">
+
+                </div>
+                <div class="mb-3 ">
+                    <label for="address">Adderss</label>
+                    <input type="text" name="address" placeholder="Full Adderss" class="form-control"
+                        value="{{data.address}}">
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn background text-dark w-100">Submit</button>
+                </div>
+            </div>
+    </div>
+    </form>
+</div>
+{{>footer}}

@@ -1,0 +1,56 @@
+{{>header}}
+
+<title>Crud | Home</title>
+
+{{>navbar}}
+
+<div class="container-fluid my-3 mid-section">
+    <h5 class="background text-dark text-center p-2">Employee Record</h5>
+    <div class="table responsive">
+        <table class="table table-bordered table-striped table-hover">
+            <thead>
+                <tr class="text-center">
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Date Of Birth</th>
+                    <th>Sex</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Address</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{# each data}}
+                <tr>
+                    <td> {{_id}} </td>
+                    <td> {{name}} </td>
+                    <td> <a class="text-decoration-none" href="mailto:{{email}}">{{email}}</a> </td>
+                    <td> <a class="text-decoration-none" href="tel:{{phone}}">{{phone}}</a> </td>
+                    <td> {{DOB}} </td>
+                    <td> {{sex}} </td>
+                    <td> {{designation}} </td>
+                    <td> {{salary}} </td>
+                    <td> {{state}} </td>
+                    <td> {{city}} </td>
+                    <td> {{address}} </td>
+                    <td><a href="/edit/{{_id}}"><span class="material-symbols-outlined">
+                                edit
+                            </span></a></td>
+                    <td><a href="/delete/{{_id}}"><span class="material-symbols-outlined">
+                                delete
+                            </span></a></td>
+                </tr>
+                {{/ each}}
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{{>footer}}

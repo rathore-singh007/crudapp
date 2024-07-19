@@ -1,0 +1,11 @@
+.background{
+    background: linear-gradient(rgb(21, 175, 236), rgb(247, 246, 246));
+}
+.mid-section{
+     /* background-color: aquamarine; */
+     height: 1000px;
+     overflow: auto;
+}
+.mid-section::-webkit-scrollbar{
+    display: none;
+}
